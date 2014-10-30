@@ -68,13 +68,14 @@ if(@$_POST['submit'])
 		if(@$boek['id'])
 		{
 			$sql = "UPDATE boeken SET 
-					titel = $conn->quote($_POST[titel]),
-					schrijver = $conn->quote($_POST[schrijver]),
-					isbn = $conn->quote($_POST[isbn]),
-					uitgever = $conn->quote($_POST[uitgever]),
-					jaar = $conn->quote($_POST[jaar]),
-					samenvatting = $conn->quote($_POST[samenvatting])
-					WHERE id=$boek[id]";
+					titel =" . $conn->quote($_POST['titel']) . ',
+					schrijver =' . $conn->quote($_POST['schrijver']) . ',
+					isbn = ' .$conn->quote($_POST['isbn']) . ',
+					uitgever = ' . $conn->quote($_POST['uitgever']) . ',
+					jaar = ' . $conn->quote($_POST['jaar']) . ',
+					samenvatting = ' . $conn->quote($_POST['samenvatting']) .
+				" WHERE id=$boek[id]";
+			// echo $sql;
 		}
 		else
 		{
@@ -86,7 +87,7 @@ if(@$_POST['submit'])
 				. $conn->quote($_POST['jaar']).','
 				. $conn->quote($_POST['samenvatting']).')';
 					
-			echo $sql;
+			// echo $sql;
 		}
 		// de databank updaten met try-catch blok
 		try
