@@ -32,4 +32,22 @@ function toonVoetTekst()
 <?php
 }
 
-$conn = new PDO($connStr, $user, $password);
+function toonFout($message)
+{
+	echo "<h2>Fout</h2>";
+	echo nl2br(htmlspecialchars($message));
+	toonVoetTekst();
+	exit();
+}
+
+try
+{
+	$conn = new PDO($connStr, $user, $password);
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+	toonKopTekst('Fout');
+	toonFout("Sorry, er is een fout opgetreden. Probeer later opnieuw" . $e->getMessage());
+}
+?>
