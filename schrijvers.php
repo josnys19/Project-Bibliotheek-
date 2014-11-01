@@ -1,7 +1,7 @@
 <?php
 include('common.inc.php');
 
-$q = $conn->query("SELECT * FROM schrijver ORDER BY achternaam, voornaam");
+$q = $conn->query("SELECT * FROM schrijvers ORDER BY achternaam, voornaam");
 $q->setFetchMode(PDO::FETCH_ASSOC);
 
 toonKopTekst('Schrijvers');
