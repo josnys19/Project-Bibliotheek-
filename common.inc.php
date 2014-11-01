@@ -16,6 +16,7 @@ function toonKopTekst($title)
 		<header>
 			<h1><?=htmlspecialchars($title)?></h1>
 			<nav>
+				<a href='index.php'>Startpagina</a>
 				<a href='boeken.php'>Boeken</a>
 				<a href='schrijvers.php'>Schrijvers</a>
 			</nav>

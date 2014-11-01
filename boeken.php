@@ -44,7 +44,7 @@ toonKopTekst('Boeken');
 </table>
 <div>
 	<hr/>
-	<a href="bewerk_boek.php">Nieuw boek toevoegen</a>
+	<a href="bewerk_boek.php">Nieuw boek toevoegen...</a>
 </div>
 <?php
 toonVoetTekst();

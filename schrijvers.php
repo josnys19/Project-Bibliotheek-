@@ -12,6 +12,7 @@ toonKopTekst('Schrijvers');
 		<th>Voornaam</th>
 		<th>Achternaam</th>
 		<th>Biografie</th>
+		<th>Bewerken</th>
 	</tr>
 	<?php
 	while($r = $q->fetch())
@@ -21,10 +22,16 @@ toonKopTekst('Schrijvers');
 			<td><?=htmlspecialchars($r['voornaam'])?></td>
 			<td><?=htmlspecialchars($r['achternaam'])?></td>
 			<td><?=htmlspecialchars($r['biografie'])?></td>
+			<td>
+				<a href="bewerk_schrijver.php?schrijver=<?=$r['id']?>">Bewerk</a>
 		</tr>
 		<?php
 	}
 	?>
 </table>
+<div>
+	<hr/>
+	<a href="bewerk_schrijver.php">Nieuwe schrijver toevoegen</a>
+</div>
 <?php
 toonVoetTekst();
