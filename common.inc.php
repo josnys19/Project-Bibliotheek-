@@ -41,6 +41,12 @@ function toonFout($message)
 	exit();
 }
 
+function exceptionHandler($e){
+	toonFout("Sorry, de site is in onderhoud \n" . $e->getMessage());
+}
+
+set_exception_handler('exceptionHandler');
+
 try
 {
 	$conn = new PDO($connStr, $user, $password);
