@@ -19,6 +19,7 @@ toonKopTekst('Boeken');
 		<th>Uitgever</th>
 		<th>Jaar</th>
 		<th>Samenvatting</th>
+		<th>Bewerken</th>
 	</tr>
 	<?php
 	while ($r = $q->fetch(PDO::FETCH_ASSOC)) 
@@ -33,10 +34,17 @@ toonKopTekst('Boeken');
 			<td><?=htmlspecialchars($r['uitgever'])?></td>
 			<td><?=htmlspecialchars($r['jaar'])?></td>
 			<td><?=htmlspecialchars($r['samenvatting'])?></td>
+			<td>
+				<a href="bewerk_boek.php?boek=<?=$r['id']?>">Bewerk</a>
+			</td>
 		</tr>
 	<?php
 	}
 	?>
 </table>
+<div>
+	<hr/>
+	<a href="bewerk_boek.php">Nieuw boek toevoegen</a>
+</div>
 <?php
 toonVoetTekst();

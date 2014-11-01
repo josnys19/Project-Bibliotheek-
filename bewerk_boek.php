@@ -157,7 +157,10 @@ if(count(@$warnings))
 		</tr>
 		<tr>
 			<td>Samenvatting van het boek</td>
-			<td><textarea name="samenvatting"><?=htmlspecialchars(@$_POST['samenvatting'])?></textarea></td>
+			<td><textarea name="samenvatting" rows="4" cols="50">
+<?=htmlspecialchars(@$_POST['samenvatting'])?>
+				</textarea>
+			</td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
