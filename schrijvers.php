@@ -24,6 +24,7 @@ toonKopTekst('Schrijvers');
 			<td><?=htmlspecialchars($r['biografie'])?></td>
 			<td>
 				<a href="bewerk_schrijver.php?schrijver=<?=$r['id']?>">Bewerk</a>
+			</td>
 		</tr>
 		<?php
 	}
@@ -35,3 +36,4 @@ toonKopTekst('Schrijvers');
 </div>
 <?php
 toonVoetTekst();
+?>

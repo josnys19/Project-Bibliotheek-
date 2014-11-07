@@ -103,6 +103,7 @@ if(count(@$warnings))
 			<td colspan="2" align="center">
 				<input type="submit" name="submit" value="Bewaar" />
 			</td>
+		</tr>
 	</table>
 	<?php 
 	if(@$schrijver['id'])
@@ -121,3 +122,8 @@ if(count(@$warnings))
 // toon voettekst
 toonVoettekst();
 ?>
+
+
+
+
+

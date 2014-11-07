@@ -57,4 +57,16 @@ catch(PDOException $e)
 	toonKopTekst('Fout');
 	toonFout("Sorry, er is een fout opgetreden. Probeer later opnieuw" . $e->getMessage());
 }
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
